@@ -1,0 +1,22 @@
+{
+    "name": "eazydocs-superblock",
+    "version": "0.9.0",
+    "scripts": {
+        "compile": "coffee -c -M frontend/",
+        "lint": "eslint frontend"
+    },
+    "dependencies": {
+        "@airtable/blocks": "0.0.43",
+        "@tinymce/tinymce-react": "^3.3.2",
+        "chai": "^4.2.0",
+        "loglevel": "^1.6.6",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-frame-component": "^4.1.1"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-plugin-react": "^7.17.0",
+        "eslint-plugin-react-hooks": "^2.3.0"
+    }
+}
