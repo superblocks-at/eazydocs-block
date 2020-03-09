@@ -19,7 +19,7 @@ This block is based on the excellent [tinymce](https://www.tiny.cloud/) rich tex
 - The SuperblocksFooter static footer component in [Superblocks.js](frontend/Superblocks.js)
 
 ## License
-Eazydocs - [MIT](LICENSE) - Do whatever the heck you want with it.
+Eazydocs - [MIT](LICENSE) - use it in any way you see fit, without limitations.
 
 Tinymce - [LGPL](https://github.com/tinymce/tinymce/blob/develop/LICENSE.TXT)
 
