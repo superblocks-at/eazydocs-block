@@ -12,7 +12,7 @@ This block is based on the excellent [tinymce](https://www.tiny.cloud/) rich tex
 
 - The use of the excellent [react-frame-component](https://www.npmjs.com/package/react-frame-component) in [EazydocsBlock.js](frontend/EazydocsBlock.js) for rendering the rich text html output inside an iframe to avoid style interferences.
 
-- The use and implementation of [react error boundaries](https://reactjs.org/docs/error-boundaries.html) in [Superblocks.js](frontend/Superblocks.js) and [ErrorBoundary.js](frontend/ErrorBoundary.js) to catch and display errors that occure during rendering.
+- The use and implementation of [react error boundaries](https://reactjs.org/docs/error-boundaries.html) in [Superblocks.js](frontend/Superblocks.js) and [ErrorBoundary.js](frontend/ErrorBoundary.js) to catch and display errors that occur during rendering.
 
 - The interception of clicking on links to views and records in the current base and the use of [Cursor.setActiveView](https://airtable.com/developers/blocks/api/models/Cursor) in [EazydocsBlock.js](frontend/EazydocsBlock.js)
 
