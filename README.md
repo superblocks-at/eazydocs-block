@@ -1,4 +1,4 @@
-# Airtable Eazydocs Block by [Superblocks.at](https://superblocks.at)
+# Airtable Eazydocs block by [Superblocks.at](https://superblocks.at)
 
 ## About the Block
 
