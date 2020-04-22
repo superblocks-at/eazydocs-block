@@ -4,6 +4,8 @@
 
 Create rich text guides and manuals for your workflow and base, with embedded videos, images and a table of contents.
 
+## Screenshot
+
 ![Eazydocs block](https://superblocks.at/superdocs-block-screenshot-1/)
 
 ## Implementation Details
