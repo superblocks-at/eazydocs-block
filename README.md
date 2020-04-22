@@ -4,6 +4,8 @@
 
 Create rich text guides and manuals for your workflow and base, with embedded videos, images and a table of contents.
 
+![Eazydocs block](https://superblocks.at/superdocs-block-screenshot-1/)
+
 ## Implementation Details
 
 This block is based on the excellent [tinymce](https://www.tiny.cloud/) rich text editor.
