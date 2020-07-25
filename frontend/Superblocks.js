@@ -1,25 +1,15 @@
-import log from 'loglevel';
-log.setLevel('info');
+import log from "loglevel";
+log.setLevel("info");
 
 // import chai from 'chai';
 // const expect = chai.expect;
-import ErrorBoundary from './ErrorBoundary'
+import ErrorBoundary from "./ErrorBoundary";
 
-import React, {
-  Fragment,
-} from 'react';
+import React, { Fragment } from "react";
 
-import {
-  globalConfig
-} from '@airtable/blocks';
+import { globalConfig } from "@airtable/blocks";
 
-import {
-  loadCSSFromString,
-  Box,
-  Link,
-  Text
-} from '@airtable/blocks/ui';
-
+import { loadCSSFromString, Box, Link, Text } from "@airtable/blocks/ui";
 
 const css = `body {
   min-height: 100vh;
@@ -62,43 +52,62 @@ footer {
 
 loadCSSFromString(css);
 
+export const SuperblockFooter = function () {
+	log.debug("SuperblockFooter.render");
 
-export const SuperblockFooter = function() {
-	log.debug('SuperblockFooter.render');
-	
-  return <footer>
-			<Box display="flex" height='24px' justifyContent='flex-end' alignItems='center' paddingRight={2}>
-				<Text display="inline-block" as="span" textColor="gray" marginRight={1} style={{
-    verticalAlign: 'middle'
-  }}> Powered by </Text>
+	return (
+		<footer>
+			<Box
+				display="flex"
+				height="24px"
+				justifyContent="flex-end"
+				alignItems="center"
+				paddingRight={2}
+			>
+				<Text
+					display="inline-block"
+					as="span"
+					textColor="gray"
+					marginRight={1}
+					style={{
+						verticalAlign: "middle",
+					}}
+				>
+					{" "}
+					Powered by{" "}
+				</Text>
 				<Link id="logoLink" href="https://superblocks.at" target="_blank">
-					<img style={{
-    maxHeight: '16px',
-    verticalAlign: 'middle'
-  }} src='https://superblocks.at/superblocks-domain-logo-2/' />
+					<img
+						style={{
+							maxHeight: "16px",
+							verticalAlign: "middle",
+						}}
+						src="https://superblocks.at/superblocks-domain-logo-2/"
+					/>
 				</Link>
 			</Box>
-		</footer>;
+		</footer>
+	);
 };
 
+export const SuperblockWrapper = function ({ children }) {
+	log.debug("SuperblockWrapper.render");
 
-export const SuperblockWrapper = function({children}) {
-	log.debug('SuperblockWrapper.render');
-	
-  return <ErrorBoundary>
+	return (
+		<ErrorBoundary>
 			{children}
 			<SuperblockFooter />
-		</ErrorBoundary>;
+		</ErrorBoundary>
+	);
 };
 
-
-// TODO Move to setPathsAsync now that docuemntation on how to use it exists
-export const clearGlobalConfig = function(keys) {
-  log.debug("clearGlobalConfig");
-  log.info('Clearing GlobalConfig');
-  const promises = [];
-  for (let i = 0; i < keys.length; i++) {
-    promises.push(globalConfig.setAsync(keys[i], undefined));
-  }
-  return Promise.all(promises);
+// TODO Move to setPathsAsync now that documentation on how to use it exists
+export const clearGlobalConfig = function (keys) {
+	log.debug("clearGlobalConfig");
+	log.info("Clearing GlobalConfig");
+	const promises = [];
+	for (let i = 0; i < keys.length; i++) {
+		promises.push(globalConfig.setAsync(keys[i], undefined));
+	}
+	return Promise.all(promises);
 };
